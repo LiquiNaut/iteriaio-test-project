@@ -1,48 +1,74 @@
-# iteriaio-test-project
+# 📄 # Document Management System
 
-<div align="center" style="margin: 30px;">
-    <a href="https://refine.dev">
-    <img alt="refine logo" src="https://refine.ams3.cdn.digitaloceanspaces.com/readme/refine-readme-banner.png">
-    </a>
-</div>
-<br/>
+A simple document management application created as a technical assignment.
 
-This [Refine](https://github.com/refinedev/refine) project was generated with [create refine-app](https://github.com/refinedev/refine/tree/master/packages/create-refine-app).
+## 🚀 The Project
 
-## Getting Started
+🔗 **Live Demo:** [iteraioproject.netlify.app](https://iteraioproject.netlify.app)
 
-A React Framework for building internal tools, admin panels, dashboards & B2B apps with unmatched flexibility ✨
+Main features:
 
-Refine's hooks and components simplifies the development process and eliminates the repetitive tasks by providing industry-standard solutions for crucial aspects of a project, including authentication, access control, routing, networking, state management, and i18n.
+- Login and registration (via Supabase).
+- View list of your uploaded documents.
+- Creating/Uploading new documents.
+- Editing and deleting documents.
+- Viewing document details with previews.
 
-## Available Scripts
+## 🛠 Tech Stack
 
-### Running the development server.
+- **Frontend:** React, TypeScript, Vite
+- **Framework:** Refine.dev
+- **Backend & Database:** Supabase (PostgreSQL + Storage)
+- **Testing:** Vitest, React Testing Library
+- **Deployment** Netlify
 
-```bash
-    npm run dev
-```
+## ⚙️ How to Run It Locally
 
-### Building for production.
+1. **Clone the repo**
 
-```bash
-    npm run build
-```
+   ```bash
+   git clone ...
+   cd iteriaio-test-project
+   ```
 
-### Running the production server.
+2. **Install libraries**
 
-```bash
-    npm run start
-```
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Set up .env file**
 
-To learn more about **Refine**, please check out the [Documentation](https://refine.dev/docs)
+   ```
+   VITE_SUPABASE_URL=your_url
+   VITE_SUPABASE_KEY=your_anon_key
+   ```
 
-- **Supabase Data Provider** [Docs](https://refine.dev/docs/core/providers/data-provider/#overview)
-- **Material UI** [Docs](https://refine.dev/docs/ui-frameworks/mui/tutorial/)
-- **React Router** [Docs](https://refine.dev/docs/core/providers/router-provider/)
+4. **Run it**
 
-## License
+   ```bash
+   npm run dev
+   ```
 
-MIT
+   The app will run at `http://localhost:5173`.
+
+5. **Test it**
+   ```bash
+   npm run test
+   ```
+
+## 📂 Architecture
+
+- **CSR + BaaS (Supabase)** 
+
+- **Refine - Provider pattern** 
+- **Component-based architecture** 
+- **Material UI** 
+
+## 📄 Used Libs
+
+- **Material UI** 
+- **Uppy** 
+- **React PDF** 
+- **Pretty Bytes**
+- **Vitest & React Testing Library**
