@@ -11,8 +11,6 @@ describe("DocumentEdit", () => {
 
   it("renders without crashing", async () => {
     renderWithRefine(<DocumentEdit />);
-
-    // Čakáme na prvé pole (Name, nie všetky elementy s "Name")
     const nameFields = await screen.findAllByLabelText(/^Name$/i);
     expect(nameFields.length).toBeGreaterThan(0);
   });
@@ -32,27 +30,21 @@ describe("DocumentEdit", () => {
 
   it("renders document type select field", async () => {
     renderWithRefine(<DocumentEdit />);
-
-    // Skontrolujeme, že existuje select pole pre typ dokumentu
     const typeField = await screen.findAllByLabelText(/Document Type/i);
     expect(typeField.length).toBeGreaterThan(0);
   });
 
   it("renders save button", async () => {
     renderWithRefine(<DocumentEdit />);
-
     const saveButton = await screen.findByRole("button", { name: /Save/i });
     expect(saveButton).toBeInTheDocument();
   });
 
   it("renders form structure", async () => {
     const { container } = renderWithRefine(<DocumentEdit />);
-
-    // Skontrolujeme, že existuje formulár
     const form = container.querySelector("form");
     expect(form).toBeInTheDocument();
 
-    // Skontrolujeme počet vstupných polí
     const inputs = container.querySelectorAll("input, select, textarea");
     expect(inputs.length).toBeGreaterThan(0);
   });
