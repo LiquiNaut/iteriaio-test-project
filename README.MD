@@ -57,6 +57,22 @@ Main features:
    npm run test
    ```
 
+6. **Docker**
+
+   Replace the values with your actual Supabase credentials from your `.env` file.
+
+   ```bash
+   docker build \
+     --build-arg VITE_SUPABASE_URL=your_supabase_url \
+     --build-arg VITE_SUPABASE_KEY=your_supabase_key \
+     -t iteriaio-test-project .
+   ```
+   
+   Run the container:
+   ```bash
+   docker run -p 5173:5173 iteriaio-test-project
+   ```
+
 ## 📂 Architecture
 
 - **CSR + BaaS (Supabase)** 
