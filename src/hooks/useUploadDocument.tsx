@@ -113,7 +113,9 @@ export const UppyUploader: React.FC<UppyUploaderProps> = ({
 
   useEffect(() => {
     return () => {
+      // @ts-expect-error - uppy.close is not in the type definition but might exist at runtime
       if (typeof uppy.close === "function") {
+        // @ts-expect-error
         uppy.close();
       } else if (typeof uppy.cancelAll === "function") {
         uppy.cancelAll();

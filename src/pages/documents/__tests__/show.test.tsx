@@ -11,7 +11,7 @@ vi.mock("../../../providers/data", () => ({
 }));
 
 vi.mock("react-router", async (importOriginal) => {
-  const actual = await importOriginal();
+  const actual = await importOriginal<any>();
   return { ...actual, useParams: () => ({ id: "1" }) };
 });
 
