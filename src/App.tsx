@@ -55,7 +55,7 @@ function App() {
                     show: "/documents/show/:id",
                     meta: {
                       canDelete: true,
-                      label: "Dokumenty",
+                      label: "Documents",
                     },
                   },
                 ]}
